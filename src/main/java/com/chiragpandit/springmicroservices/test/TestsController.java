@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestsController {
-
+/*
 	@Autowired
-	TestsRepository testRepository;
+	TestsRepository testRepository;*/
 	
 	List<Test> tests = new ArrayList<Test>(
 			Arrays.asList(
@@ -25,13 +25,13 @@ public class TestsController {
 	
 	@RequestMapping ("/tests")
 	public List <Test> getAllTests (){
-		//return testRepository;
-		List <Test> tests = new ArrayList<Test>();
+		return tests;
+		/*List <Test> tests = new ArrayList<Test>();
 		Iterable <Test> testIterator = testRepository.findAll();
 		for (Test test : testIterator) 
 		{
 			tests.add(test);
 		}
-		return tests;
+		return tests;*/
 	}
 }
